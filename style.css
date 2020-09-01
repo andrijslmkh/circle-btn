@@ -1,0 +1,59 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+.wrapper {
+	width: 100px;
+	margin: 0 auto;
+}
+.con-switch {
+	display: block;
+	cursor: pointer;
+	width: 100%;
+	background: rgba(99, 107, 144, 0.15);
+	position: relative;
+	height: 48px;
+	border-radius: 25px;
+	transition: all .25s ease;
+}
+
+.input {
+	cursor: pointer;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	opacity: 0;
+	z-index: 100;
+}
+
+.circle {
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: 5px;
+	width: 38px;
+	height: 38px;
+	border-radius: 20px;
+	background: rgb(99, 107, 144);
+	z-index: 200;
+	transition: all .25s ease;
+	box-shadow: 0px 10px 20px 0px rgba(99, 107, 144, 0.35);
+	opacity: 4;
+}
+
+.con-switch:hover {
+	background: rgba(99, 107, 144, 0.25);
+}
+.input:checked ~ .circle {
+	left: 52px;
+	opacity: 1;
+}
+.con-switch:active .circle {
+	width: 50%;
+}
+.con-switch:active .input:checked ~ .circle {
+	left: 40px;
+}
